@@ -356,13 +356,13 @@ body {
 
 .projects {
     display: grid;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 3rem;
-
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+    justify-items: center;
+    margin: 3rem auto 0;
+    max-width: 1400px;
+    padding: 0 1rem;
 
     transform: .3s;
 
@@ -373,17 +373,25 @@ body {
     position: relative;
     transform-origin: center;
 
+    align-self: start;
+
     border: 2px solid var(--element-bg-color);
     border-radius: 3px;
 
     /* width: 30%; */
     /* height: 30%; */
 
+    width: min(100%, 30rem);
+
+    overflow: hidden;
+    --meta-height: 3.2rem;
+    --image-h: 20vh;
+
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
 
-    max-width: 25rem;
+    max-width: 40rem;
 
     cursor: crosshair;
 
@@ -402,10 +410,14 @@ body {
 
 .hide {
     position: absolute;
-    bottom: 40%;
+    bottom: 0%;
     left: 0;
     width: 100%;
+    height: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
     opacity: 0;
@@ -431,8 +443,14 @@ body {
 }
 
 #project #image {
+    display: block;
     width: 100%;
+    object-fit: cover;
     border-radius: 3px 3px 0 0;
+
+    height: var(--image-h);
+
+    transition: height 0.25s ease, transform 0.25s ease;
 }
 
 #project #game-title {
@@ -446,6 +464,28 @@ body {
     float:right;
 
     color: var(--text2-color);
+}
+
+#project #date,
+#project #game-title {
+    overflow: hidden;
+    background-color: var(--shadow-color);
+    transition: opacity 0.2s ease, max-height 0.2s ease, padding 0.2s ease, margin 0.2s ease;
+    max-height: 2rem;
+    opacity: 1;
+}
+
+#project:hover #date,
+#project:hover #game-title {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+#project:hover #image {
+    height: calc(var(--image-h) + var(--meta-height));
 }
 
 #project p {
@@ -467,28 +507,15 @@ body {
     background-color:rgba(0,0,0,0.6);
 }
 
-@media screen and (min-width: 1200px) {
-    .projects {
-        grid-template-columns: repeat(5, 20%);
-    }
-}
-
 @media screen and (min-width: 951px) {
-    .projects {
-        grid-template-columns: repeat(4, 25%);
-
-        margin: 0 1rem 0 1rem;
-    }
     #project {
         /* margin-left: 3rem; */
         margin-right: 3rem;
         margin-top: 3rem;
 
         min-width: 15rem;
-    }
 
-    #project #image {
-        height: 14rem;
+        --image-h: 14rem;
     }
 }
 
@@ -582,6 +609,12 @@ body {
     transition: all 0.3s ease;
 }
 
+#skill-box:hover {
+    transform: scale(1.03);
+
+    transition: transform 0.2s ease;
+}
+
 #skill-box p {
     background-color: var(--shadow-color);
     color: var(--text-color);
@@ -619,13 +652,11 @@ body {
 
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 
-    height: 25rem;
+    overflow: hidden;
 }
 
 .footer-text {
     background-color: var(--element-bg-color);
-
-    display:list-item;
 }
 
 .footer .cpright {

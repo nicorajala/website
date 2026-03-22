@@ -22,7 +22,7 @@
 						<li class="nav-btn" data-row-id="row3" onclick="show('projects-holder', 'start')">My Projects</li>
 						<li class="nav-btn" data-row-id="row2" onclick="show('skills', 'start')">My skills</li>
 						<li class="nav-btn" data-row-id="row4" onclick="show('footer', 'end')">Contact me</li>
-						<li class="nav-btn" data-row-id="row5"><a href="https://www.canva.com/design/DAGdsqLROe8/SyLOSsNsOqOREBPrtBSR5w/view?utm_content=DAGdsqLROe8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he2712154ba">My CV</a></li>
+						<li class="nav-btn" data-row-id="row5"><a href="https://www.canva.com/design/DAHDcrwIpGo/aD1iFeRWVVgTSml10MDN-w/view?utm_content=DAHDcrwIpGo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h092db8509b">My CV</a></li>
 					 </ul>
 				</div>
 				<div class="switch">
@@ -41,7 +41,7 @@
 				<p class="background">
 					I have been interested about programming and computers from a young age. 
 				</p>
-				<p>My hobbies are playing games, making stuff and playing guitar.</p>
+				<p>My hobbies include playing guitar and playing games.</p>
 			</div>
 
 			<div id="projects-holder">
@@ -50,7 +50,7 @@
 
 					<div id="project" class="project" onclick="openProject('kagetsu')">
 						<div class="show">
-							<img id="image" src="../../res/pictures/ninjagame.png">
+							<img id="image" src="../../res/pictures/ninjagame.webp">
 							<p id="date">2025</p>
 							<p id="game-title">Kagetsu</p>
 						</div>
@@ -67,18 +67,15 @@
 									.slide {background-color: var(--element-bg-color);}
 								</style>
 								<div class="slide fade activus">
-									<img src="../../res/pictures/ninjagame2.png">
+									<img src="../../res/pictures/ninjagame2.webp">
 								</div>
 							</div>
 							<div class="about-project">
 								<p class="about-project-text">
-									Kagetsu ("months" in japanese) is a stealth game set in somewhat of a fantasy version of 14th century Japan. It is a school project made in Unreal Engine 5.	
+									Kagetsu is a stealth game set in somewhat of a fantasy version of 14th century Japan. It is a school project made in Unreal Engine 5.	
 								</p>
 								<p class="about-project-text" style="margin-top: -3rem;">
 									Some of our inspirations for the game were, Ghost of Tsushima, Hitman series and Sekiro: Shadows Die Twice.
-								</p>
-								<p class="about-project-text" style="margin-top: -3rem;">
-									This game is still in development and we may release a demo version later this year.
 								</p>
 							</div>
 							<br><br>
@@ -87,7 +84,7 @@
 
 					<div id="project" class="project" onclick="openProject('termemum')">
 						<div class="show">
-							<img id="image" src="../../res/pictures/termemum2.png">
+							<img id="image" src="../../res/pictures/termemum2.webp">
 							<p id="date">2025</p>
 							<p id="game-title">Termemum</p>
 						</div>
@@ -104,7 +101,7 @@
 									.slide {background-color: var(--element-bg-color);}
 								</style>
 								<div class="slide fade activus">
-									<img src="../../res/pictures/termemum1.png">
+									<img src="../../res/pictures/termemum1.webp">
 								</div>
 							</div>
 							<div class="about-project">
@@ -153,9 +150,9 @@
 							</div>
 							<div class="about-project">
 								<p class="about-project-text">
-									VSAEditor is a level editor made in Java. I originally made it for another game project, but later it turned out to
+									VSAEditor (Very Shitty Ass Editor -- I'm not good at naming things) is a level editor made in Java. I originally made it for another game project, but later it turned out to
 									be its own thing. The editor supports creating multiple levels in a single project. It has event, entity and basic scripting support.
-									I'm also planning on adding more features.
+									I also initally planned to add more features but I don't see myself doing that.
 								</p>
 								<p class="about-project-text" style="margin-top: -3rem;">
 									The project is open source and can be found on my github. <a href="https://github.com/KilpikonnanKerma/vsaeditor">VSA Editor</a>
@@ -206,7 +203,7 @@
 					<div id="project" class="project" onclick="openProject('ctc')">
 						<div class="show">
 							<img id="image" src="res/pictures/ctc.png">
-							<p id="date">2024-2025</p>
+							<p id="date">2024</p>
 							<p id="game-title">Cursed to Consume</p>
 						</div>
 						<div class="hide">
@@ -317,49 +314,9 @@
 							<br><br>
 						</div>
 					</div>
-					<!-- Had to take this out since I didn't have anything to show about it anymore -->
-					<!-- <div id="project" class="project" onclick="openProject('kodeos')">
-						<div class="show">
-							<img id="image" src="https://wallpaperaccess.com/full/4148220.jpg">
-							<p id="date">2019-2023</p>
-							<p id="game-title">KodeOS</p>
-						</div>
-						<div class="hide">
-							<p>32bit operating system written in assembly.</p>
-						</div>
-					</div>
-					<div class="project-popup" id="kodeos">
-						<button class="oth-button" onclick="closeProject('kodeos')">Back</button>
-		
-						<div class="project">
-							<div class="slideshow-container">
-								<style>
-									.slide {background-color: var(--element-bg-color);}
-								</style>
-								<div class="slide fade activus">
-								<!-- <img src="../../res/pictures/Screenshot 2024-12-01 112234.png">
-								</div>
-							</div>
-							<div class="about-project">
-								<p class="about-project-text">
-									KodeOS is a 16/32bit operating system written in x86 assembly using NASM. I started the project
-									on sixth grade for fun (it was not). The OS features a simple file system, a BASIC (the language) compiler
-									some applications like text editor, music listening software and stuff like that.
-									It was actually usable for everything else but internet since it doesn't have
-									internet access or a web browser.
-								</p>
-								<p class="about-project-text" style="margin-top: -3rem;">
-									I am not planning on adding the .iso file here or anything.
-									Currently the source code is broken for some reason, so when I fix it I'll maybe
-									add some screenshots here.
-								</p>
-							</div>
-							<br><br>
-						</div>
-					</div> -->
 					<div id="project" class="project" onclick="openProject('es-sim')">
 						<div class="show">
-							<img id="image" src="res/pictures/es2.png">
+							<img id="image" src="res/pictures/es2.webp">
 							<p id="date">2019</p>
 							<p id="game-title">ES Simulator</p>
 						</div>
@@ -376,7 +333,7 @@
 									.slide {background-color: var(--element-bg-color);}
 								</style>
 								<div class="slide fade activus">
-									<img src="../../res/pictures/es1.png">
+									<img src="res/pictures/es1.webp">
 								</div>
 							</div>
 							<div class="about-project">
@@ -385,8 +342,6 @@
 									In the game you drink "ES" which is actually cola because I couldn't find any 
 									energy drink models on the Unity Asset store.
 								</p>
-								<!-- <a href="https://gamejolt.com/games/es_simulator/472663" id="download-btn" class="fa fa-download">&nbsp<p>View game page</p></a> -->
-								<iframe src="https://widgets.gamejolt.com/package/v1?key=rEQpAFSq" frameborder="0" width="80%" height="175" style="display: flex; margin: auto;"></iframe>
 								<div class="videos">
 									<video id="video" controls="1" src="../../res/pictures/Early ES Simulator footage.mp4"></video>
 									<p>Early footage of ES Simulator.</p>
@@ -410,7 +365,6 @@
 							<li>C</li>
 							<li>C++</li>
 							<li>C#</li>
-							<li>x86 and x86_64 Assembly</li>
 							<li>Python</li>
 							<li>Java</li>
 							<li>HTML/CSS/JS</li>
@@ -432,7 +386,6 @@
 							<li>GIMP</li>
 							<li>Blender</li>
 							<li>Reaper</li>
-							<li>MetaTrader5</li>
 						</ul>
 					</div>
 					<div class="other" id="skill-box">
@@ -445,7 +398,6 @@
 							<li>3D modeling.</li>
 							<li>Video editing.</li>
 							<li>Music production.</li>
-							<li>Basic day trading knowledge.</li>
 						</ul>
 					</div>
 				</div>
@@ -468,8 +420,8 @@
 			</div>
 
 			<div class="footer-text">
-				<p class="cpright">Last updated: 9.11.2025</p>
-				<p class="cpright">&#169; 2024-2025 Nico Rajala. All rights reserved</p>
+				<p class="cpright">Last updated: 22.3.2026</p>
+				<p class="cpright">&#169; 2024-2026 Nico Rajala. All rights reserved</p>
 			</div>
 		</footer>
 	</body>
